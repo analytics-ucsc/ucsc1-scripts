@@ -1,0 +1,179 @@
+  /* =========================
+     RESET SOLO UCSC1
+  ========================= */
+
+  .ucsc1-hero-carousel,
+  .ucsc1-hero-carousel * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* =========================
+     CONTENEDOR
+  ========================= */
+
+  .ucsc1-hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ucsc1-slides {
+    position: relative;
+    width: 100%;
+  }
+
+  /* =========================
+     SLIDES
+  ========================= */
+
+  .ucsc1-slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+  }
+  .ucsc1-slide.ucsc1-active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* =========================
+     IMÁGENES
+  ========================= */
+
+  .ucsc1-slide picture,
+  .ucsc1-slide img {
+    width: 100%;
+    display: block;
+  }
+
+  .ucsc1-slide img {
+    height: auto;
+  }
+
+  /* =========================
+     OVERLAY
+  ========================= */
+
+  .ucsc1-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .ucsc1-content {
+    color: #fff;
+    max-width: 700px;
+  }
+
+  /* =========================
+     BOTÓN
+  ========================= */
+
+  .ucsc1-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    position: absolute;
+    bottom: 1rem;
+  }
+
+  .ucsc1-btn:hover {
+    background: #f2f2f2;
+  }
+
+  /* =========================
+     FLECHAS
+  ========================= */
+
+  .ucsc1-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: 0.3s ease;
+  }
+
+  .ucsc1-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .ucsc1-prev {
+    left: 20px;
+  }
+
+  .ucsc1-next {
+    right: 20px;
+  }
+
+  /* =========================
+     BULLETS
+  ========================= */
+
+  .ucsc1-bullets {
+    position: absolute;
+    bottom: 20px;
+    left: 1rem;
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+  }
+
+  .ucsc1-bullet {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .ucsc1-bullet.ucsc1-bullet-active {
+    background: #fff;
+    transform: scale(1.2);
+  }
+
+  /* =========================
+     MOBILE
+  ========================= */
+
+  @media(max-width:768px) {
+
+    .ucsc1-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    .ucsc1-btn {
+      padding: 12px 22px;
+      font-size: 14px;
+    }
+
+  }
